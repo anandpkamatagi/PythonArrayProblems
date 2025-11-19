@@ -1,0 +1,37 @@
+# Given an array of integers arr[], move all the zeros to the end of the array while maintaining the relative order of all non-zero elements.
+
+# Examples: 
+
+# Input: arr[] = [1, 2, 0, 4, 3, 0, 5, 0]
+# Output: [1, 2, 4, 3, 5, 0, 0, 0]
+# Explanation: There are three 0s that are moved to the end.
+
+# Input: arr[] = [10, 20, 30]
+# Output: [10, 20, 30]
+# Explanation: No change in array as there are no 0s.
+
+# Input: arr[] = [0, 0]
+# Output: [0, 0]
+# Explanation: No change in array as there are all 0s.
+
+
+if __name__ == "__main__":
+    
+    
+    def moveAllZerosToEnd(arr):
+        print(f"before {arr}")
+        for i in range(len(arr)):
+            if(arr[i] == 0):
+                arr.append(0)
+                del arr[i]
+        print(f"After {arr}")
+        
+    
+    moveAllZerosToEnd([1, 2, 0, 4, 3, 0, 5, 0])
+    
+    moveAllZerosToEnd([10, 20, 30])
+    
+    moveAllZerosToEnd([0, 0])
+    
+    
+        
