@@ -17,9 +17,17 @@
 
 
 if __name__ == "__main__": 
-    def removeDuplicate(arr):
-        
+    def removeDuplicateUsingHashSet(arr):
         print(f"Given Array: {arr}")
         hs  = set(arr)
         return list(hs)
-    print(removeDuplicate([1,2,2]))
+    # print(removeDuplicateUsingHashSet([1,2,2]))
+    
+    def removeDuplicateWithoutExtraMemory(arr):
+        print(f"Given Array: {arr}")
+        for i in range(len(arr)-1):
+            if(arr[i] == arr[i+1]):
+                del arr[i]
+        print(f"after removing deplucates: {arr}")
+        
+    print(removeDuplicateUsingHashSet([1,2,2,1,3,4,5,4]))
